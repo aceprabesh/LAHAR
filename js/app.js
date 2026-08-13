@@ -372,6 +372,7 @@ function createProductCard(product) {
     <div class="product-card-info">
       <h3 class="product-card-name">${product.name}</h3>
       <p class="product-card-price">${Cart.formatPrice ? Cart.formatPrice(product.price) : `NPR ${product.price.toLocaleString()}`}</p>
+      ${product.colors && product.colors.length > 0 ? `<div class="product-card-colors">${product.colors.map(c => `<span class="color-swatch" style="background-color: ${c.hex}" title="${c.name}"></span>`).join('')}</div>` : ''}
     </div>
   `;
 
@@ -466,9 +467,14 @@ function initApp() {
   initExpandables();
 
   // Render product grids
-  const featuredGrid = document.querySelector('.featured-products-grid, .products-grid');
+  const newCollectionGrid = document.querySelector('.products-grid');
+  if (newCollectionGrid) {
+    renderProductGrid(ProductService.getNewArrivals(), '.products-grid');
+  }
+
+  const featuredGrid = document.querySelector('.featured-products-grid');
   if (featuredGrid) {
-    renderProductGrid(ProductService.getFeatured(), '.featured-products-grid, .products-grid');
+    renderProductGrid(ProductService.getFeatured(), '.featured-products-grid');
   }
 
   const newArrivalsGrid = document.querySelector('.new-arrivals-grid');
