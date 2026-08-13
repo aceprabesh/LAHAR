@@ -13,51 +13,75 @@
 const PRODUCTS = [
   {
     id: 1,
-    name: "AABHA FLOW DRESS",
-    slug: "aabha-flow-dress",
+    name: "AABHA KURTHA",
+    slug: "aabha-kurtha",
     price: 14500,
-    category: "dresses",
-    images: ["/assets/images/product-1.jpg", "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=800&q=80"],
-    colors: [{ name: "Sand", hex: "#D8C7AD" }, { name: "Terracotta", hex: "#A65D45" }],
+    category: "kurtha",
+    images: ["/assets/images/products/3f38a848f1e62ee785a55ad35d2e88e6.jpg"],
+    colors: [{ name: "Sand", hex: "#D8C7AD" }],
     sizes: ["XS", "S", "M", "L", "XL"],
     featured: true,
     newArrival: true
   },
   {
     id: 2,
-    name: "JUNELI WRAP SET",
-    slug: "juneli-wrap-set",
+    name: "JUNELI KURTHA",
+    slug: "juneli-kurtha",
     price: 18900,
-    category: "sets",
-    images: ["https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80", "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&q=80"],
-    colors: [{ name: "Ivory", hex: "#F5F0E8" }, { name: "Sage", hex: "#7B8068" }],
+    category: "kurtha",
+    images: ["/assets/images/products/645a90d1567d6312acb70281133a5466.jpg"],
+    colors: [{ name: "Terracotta", hex: "#A65D45" }],
     sizes: ["XS", "S", "M", "L"],
     featured: true,
     newArrival: true
   },
   {
     id: 3,
-    name: "LAHAR LINEN TOP",
-    slug: "lahar-linen-top",
+    name: "LAHAR KURTHA",
+    slug: "lahar-kurtha",
     price: 7500,
-    category: "tops",
-    images: ["https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=800&q=80"],
-    colors: [{ name: "Charcoal", hex: "#1C1C1A" }, { name: "Sand", hex: "#D8C7AD" }],
+    category: "kurtha",
+    images: ["/assets/images/products/85438a6504903e627f5421cd395e4eee.jpg"],
+    colors: [{ name: "Charcoal", hex: "#1C1C1A" }],
     sizes: ["XS", "S", "M", "L", "XL"],
     featured: true,
-    newArrival: false
+    newArrival: true
   },
   {
     id: 4,
-    name: "RITU WIDE-LEG TROUSER",
-    slug: "ritu-wide-leg-trouser",
+    name: "RITU KURTHA",
+    slug: "ritu-kurtha",
     price: 9800,
-    category: "bottoms",
-    images: ["https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80"],
-    colors: [{ name: "Sand", hex: "#D8C7AD" }, { name: "Charcoal", hex: "#1C1C1A" }],
+    category: "kurtha",
+    images: ["/assets/images/products/7fb7dd8f8fb89955fb3095e49f97808a.jpg"],
+    colors: [{ name: "Sage", hex: "#7B8068" }],
     sizes: ["XS", "S", "M", "L", "XL"],
     featured: true,
-    newArrival: false
+    newArrival: true
+  },
+  {
+    id: 5,
+    name: "SIRA KURTHA",
+    slug: "sira-kurtha",
+    price: 12500,
+    category: "kurtha",
+    images: ["/assets/images/products/df1638734489d337f34d15df02b2262e.jpg"],
+    colors: [{ name: "Ivory", hex: "#F5F0E8" }],
+    sizes: ["XS", "S", "M", "L"],
+    featured: true,
+    newArrival: true
+  },
+  {
+    id: 6,
+    name: "NAMUNA KURTHA",
+    slug: "namuna-kurtha",
+    price: 15500,
+    category: "kurtha",
+    images: ["/assets/images/products/f346d98c4755de715775d330f93edbec.jpg"],
+    colors: [{ name: "Sand", hex: "#D8C7AD" }],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    featured: true,
+    newArrival: true
   }
 ];
 
