@@ -160,3 +160,10 @@ function editProduct(id) {
 
 // Initialize
 loadDashboard();
+
+// Logout
+document.getElementById('logoutBtn')?.addEventListener('click', () => {
+  localStorage.removeItem('admin_token');
+  localStorage.removeItem('admin_user');
+  window.location.href = '/admin/login.html';
+});

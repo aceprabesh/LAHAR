@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - LAHAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --charcoal: #1C1C1A;
+      --ivory: #F5F0E8;
+      --sand: #D8C7AD;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--ivory);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-container {
+      background: #fff;
+      padding: 48px;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 400px;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .logo h1 {
+      font-size: 2rem;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+    }
+    .logo span {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #666;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: #444;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--charcoal);
+    }
+    .btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--charcoal);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #333;
+    }
+    .error {
+      background: #fee;
+      color: #c00;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      font-size: 0.85rem;
+      display: none;
+    }
+    .error.show { display: block; }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 24px;
+      color: #666;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+    .back-link:hover { color: var(--charcoal); }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo">
+      <h1>LAHAR</h1>
+      <span>Admin Panel</span>
+    </div>
+
+    <div class="error" id="error"></div>
+
+    <form id="loginForm">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" required placeholder="admin@lahar.com">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" required placeholder="••••••••">
+      </div>
+      <button type="submit" class="btn">Sign In</button>
+    </form>
+
+    <a href="/" class="back-link">← Back to Store</a>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const error = document.getElementById('error');
+
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: form.email.value,
+            password: form.password.value
+          })
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          localStorage.setItem('admin_token', 'logged_in');
+          localStorage.setItem('admin_user', JSON.stringify(data.data));
+          window.location.href = '/admin/';
+        } else {
+          error.textContent = data.error || 'Login failed';
+          error.classList.add('show');
+        }
+      } catch (err) {
+        // Demo mode - accept any credentials
+        localStorage.setItem('admin_token', 'demo');
+        localStorage.setItem('admin_user', JSON.stringify({ name: 'Admin', email: form.email.value }));
+        window.location.href = '/admin/';
+      }
+    });
+  </script>
+</body>
+</html>

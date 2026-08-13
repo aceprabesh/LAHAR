@@ -7,6 +7,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="admin.css">
+  <script>
+    // Check auth
+    if (!localStorage.getItem('admin_token')) {
+      window.location.href = '/admin/login.html';
+    }
+  </script>
 </head>
 <body>
   <div class="admin-layout">
@@ -14,7 +20,7 @@
     <aside class="sidebar">
       <div class="sidebar-header">
         <h1>LAHAR</h1>
-        <span>Admin Panel</span>
+        <span>Admin</span>
       </div>
       <nav class="sidebar-nav">
         <a href="#" class="nav-item active" data-section="dashboard">
@@ -39,7 +45,7 @@
         </a>
       </nav>
       <div class="sidebar-footer">
-        <a href="/">← Back to Store</a>
+        <a href="/" id="logoutBtn">Logout</a>
       </div>
     </aside>
 
