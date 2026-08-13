@@ -467,9 +467,10 @@ function initApp() {
   initExpandables();
 
   // Render product grids
-  const newCollectionGrid = document.querySelector('.products-grid');
+  const newCollectionGrid = document.querySelector('#new-collection-grid');
   if (newCollectionGrid) {
-    renderProductGrid(ProductService.getNewArrivals(), '.products-grid');
+    console.log('Rendering new collection products:', ProductService.getNewArrivals());
+    renderProductGrid(ProductService.getNewArrivals(), '#new-collection-grid');
   }
 
   const featuredGrid = document.querySelector('.featured-products-grid');
