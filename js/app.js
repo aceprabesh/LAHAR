@@ -17,7 +17,7 @@ const PRODUCTS = [
     slug: "aabha-kurtha",
     price: 14500,
     category: "kurtha",
-    images: ["/assets/images/products/3f38a848f1e62ee785a55ad35d2e88e6.jpg"],
+    images: ["/assets/images/hero-kurtha.jpg"],
     colors: [{ name: "Sand", hex: "#D8C7AD" }],
     sizes: ["XS", "S", "M", "L", "XL"],
     featured: true,
