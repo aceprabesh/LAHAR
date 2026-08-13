@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" fill="none">
+  <!-- LAHAR Logo with integrated wave -->
+  <defs>
+    <path id="wave-path" d="M0,40 Q25,25 50,40 T100,40 T150,40 T200,40 T250,40 T300,40 T350,40 T400,40" stroke="#1C1C1A" stroke-width="1" fill="none"/>
+  </defs>
+
+  <!-- L -->
+  <text x="10" y="55" font-family="Cormorant Garamond, serif" font-size="48" font-weight="400" letter-spacing="8" fill="#1C1C1A">L</text>
+  <path d="M10,58 Q20,55 35,60 T55,58" stroke="#1C1C1A" stroke-width="1" fill="none" opacity="0.3"/>
+
+  <!-- A -->
+  <text x="55" y="55" font-family="Cormorant Garamond, serif" font-size="48" font-weight="400" letter-spacing="8" fill="#1C1C1A">A</text>
+  <path d="M60,58 Q75,62 85,56 T100,60" stroke="#1C1C1A" stroke-width="1" fill="none" opacity="0.3"/>
+
+  <!-- H -->
+  <text x="105" y="55" font-family="Cormorant Garamond, serif" font-size="48" font-weight="400" letter-spacing="8" fill="#1C1C1A">H</text>
+  <path d="M110,56 Q125,52 140,58 T170,54" stroke="#1C1C1A" stroke-width="1" fill="none" opacity="0.3"/>
+
+  <!-- A -->
+  <text x="175" y="55" font-family="Cormorant Garamond, serif" font-size="48" font-weight="400" letter-spacing="8" fill="#1C1C1A">A</text>
+  <path d="M180,58 Q195,54 210,60 T240,56" stroke="#1C1C1A" stroke-width="1" fill="none" opacity="0.3"/>
+
+  <!-- R -->
+  <text x="245" y="55" font-family="Cormorant Garamond, serif" font-size="48" font-weight="400" letter-spacing="8" fill="#1C1C1A">R</text>
+  <path d="M250,56 Q270,52 285,58 T320,54" stroke="#1C1C1A" stroke-width="1" fill="none" opacity="0.3"/>
+
+  <!-- Wave line under logo -->
+  <path d="M10,68 Q50,62 100,68 T190,68 T280,68 T370,68 T400,68" stroke="#D8C7AD" stroke-width="1.5" fill="none"/>
+</svg>

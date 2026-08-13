@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product details - LAHAR contemporary Nepali fashion">
+  <title>Product | LAHAR</title>
+
+  <link rel="icon" type="image/svg+xml" href="/assets/svg/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/utilities.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/pages/product.css">
+</head>
+<body data-page="product">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="navbar-menu-toggle" aria-label="Toggle menu">
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </div>
+      <a href="/" class="navbar-logo">
+        <span class="logo-text">LAHAR</span>
+        <span class="logo-tagline">WEAR YOUR WAVE</span>
+      </a>
+      <div class="navbar-nav">
+        <a href="/shop.html">Shop</a>
+        <a href="/shop.html?filter=new">New Arrivals</a>
+        <a href="/shop.html?collection=summer">Collections</a>
+        <a href="/journal.html">Journal</a>
+        <a href="/about.html">About</a>
+      </div>
+      <div class="navbar-icons">
+        <button class="navbar-icon navbar-icon-search" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="/account.html" class="navbar-icon navbar-icon-account" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </a>
+        <button class="navbar-icon navbar-icon-bag" aria-label="Shopping bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="bag-count">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-nav">
+      <a href="/shop.html">Shop</a>
+      <a href="/shop.html?filter=new">New Arrivals</a>
+      <a href="/shop.html?collection=summer">Collections</a>
+      <a href="/journal.html">Journal</a>
+      <a href="/about.html">About</a>
+    </div>
+    <div class="mobile-menu-footer">
+      <div class="mobile-menu-social">
+        <a href="https://instagram.com/lahar.wears" target="_blank">Instagram</a>
+      </div>
+      <span class="mobile-menu-tagline">WEAR YOUR WAVE</span>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="drawer-overlay"></div>
+  <div class="cart-drawer drawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Shopping Bag</h3>
+      <button class="drawer-close" aria-label="Close bag">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="cart-drawer-body"></div>
+    <div class="cart-drawer-footer" style="display: none;">
+      <div class="cart-subtotal"><span>Subtotal</span><span class="cart-subtotal-amount">NPR 0</span></div>
+      <div class="cart-drawer-actions">
+        <a href="/checkout.html" class="btn btn-primary btn-full">Checkout</a>
+        <a href="/cart.html" class="btn btn-secondary btn-full">View Bag</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content" class="product-page">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="product-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <a href="/shop.html">Shop</a> / <span class="product-breadcrumb-current">Product Name</span>
+      </nav>
+
+      <div class="product-layout">
+        <!-- Product Gallery -->
+        <div class="product-gallery">
+          <div class="gallery-main-image">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80" alt="Product image" class="gallery-main-image-img" id="mainImage">
+          </div>
+
+          <div class="gallery-thumbnails">
+            <button class="gallery-thumbnail active" data-full="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=200&q=80" alt="Product thumbnail 1">
+            </button>
+            <button class="gallery-thumbnail" data-full="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=800&q=80">
+              <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=200&q=80" alt="Product thumbnail 2">
+            </button>
+            <button class="gallery-thumbnail" data-full="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80">
+              <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&q=80" alt="Product thumbnail 3">
+            </button>
+          </div>
+
+          <!-- Gallery navigation -->
+          <button class="gallery-prev gallery-nav" aria-label="Previous image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button class="gallery-next gallery-nav" aria-label="Next image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+
+          <!-- Mobile dots -->
+          <div class="gallery-dots">
+            <span class="gallery-dot active"></span>
+            <span class="gallery-dot"></span>
+            <span class="gallery-dot"></span>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+          <span class="product-category">Dresses</span>
+          <h1 class="product-title" id="productTitle">AABHA FLOW DRESS</h1>
+          <p class="product-price" id="productPrice">NPR 14,500</p>
+
+          <p class="product-short-description" id="productDescription">
+            Effortless movement in every fold. Crafted from our signature linen-cotton blend, its relaxed silhouette and subtle A-line create an effortless elegance.
+          </p>
+
+          <!-- Color Selector -->
+          <div class="product-colors">
+            <p class="product-variants-label">Color: <span id="selectedColorName">Sand</span></p>
+            <div class="color-options" id="colorOptions">
+              <button class="color-option active" style="background-color: #D8C7AD;" data-color-name="Sand" title="Sand"></button>
+              <button class="color-option" style="background-color: #A65D45;" data-color-name="Terracotta" title="Terracotta"></button>
+            </div>
+          </div>
+
+          <!-- Size Selector -->
+          <div class="product-sizes">
+            <p class="product-variants-label">Size: <span id="selectedSize">S</span></p>
+            <div class="size-selector" id="sizeOptions">
+              <button class="size-option">XS</button>
+              <button class="size-option active">S</button>
+              <button class="size-option">M</button>
+              <button class="size-option">L</button>
+              <button class="size-option">XL</button>
+            </div>
+            <a href="#" class="size-guide-link">Size Guide</a>
+          </div>
+
+          <!-- Quantity -->
+          <div class="product-quantity">
+            <p class="product-variants-label">Quantity</p>
+            <div class="quantity-selector">
+              <button class="quantity-btn" id="qtyMinus">−</button>
+              <input type="number" class="quantity-input" id="qtyInput" value="1" min="1" max="10">
+              <button class="quantity-btn" id="qtyPlus">+</button>
+            </div>
+          </div>
+
+          <!-- Add to Cart -->
+          <div class="product-actions">
+            <div class="add-to-cart-buttons">
+              <button class="btn btn-primary add-to-cart-btn" id="addToCartBtn">Add to Bag</button>
+              <button class="btn btn-secondary buy-now-btn" id="buyNowBtn">Buy Now</button>
+            </div>
+          </div>
+
+          <!-- Available badge -->
+          <div class="product-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Available in Nepal
+          </div>
+
+          <!-- Product Details Expandables -->
+          <div class="product-details">
+            <div class="expandable active">
+              <div class="expandable-header">
+                <span class="expandable-title">Description</span>
+                <svg class="expandable-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+              <div class="expandable-content" style="max-height: 500px;">
+                <div class="expandable-body">
+                  The Aabha Flow Dress moves with you, not against you. Crafted from our signature linen-cotton blend, its relaxed silhouette and subtle A-line create an effortless elegance perfect for warm Nepali afternoons. The breathable fabric ensures comfort throughout your day, while the timeless design transitions seamlessly from casual to formal occasions.
+                </div>
+              </div>
+            </div>
+
+            <div class="expandable">
+              <div class="expandable-header">
+                <span class="expandable-title">Material & Care</span>
+                <svg class="expandable-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+              <div class="expandable-content">
+                <div class="expandable-body">
+                  55% Linen, 45% Cotton<br><br>
+                  Gentle machine wash cold. Line dry in shade. Iron on medium heat. Do not bleach. Store folded or hung to maintain shape.
+                </div>
+              </div>
+            </div>
+
+            <div class="expandable">
+              <div class="expandable-header">
+                <span class="expandable-title">Shipping</span>
+                <svg class="expandable-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+              <div class="expandable-content">
+                <div class="expandable-body">
+                  Free shipping within Kathmandu. Delivery in 2-4 business days.<br>
+                  Shipping to other cities in Nepal: NPR 200-500 depending on location.<br>
+                  International shipping available to select countries.
+                </div>
+              </div>
+            </div>
+
+            <div class="expandable">
+              <div class="expandable-header">
+                <span class="expandable-title">Returns</span>
+                <svg class="expandable-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+              <div class="expandable-content">
+                <div class="expandable-body">
+                  Free returns within 14 days of delivery. Items must be unworn with tags attached.<br>
+                  To initiate a return, please contact us at returns@lahar.com or visit your nearest LAHAR store.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Products -->
+    <section class="related-products">
+      <div class="container">
+        <h2>You May Also Like</h2>
+        <div class="related-products-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2 class="footer-logo">LAHAR</h2>
+          <p class="footer-tagline">WEAR YOUR WAVE</p>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-column-title">Shop</h4>
+          <nav class="footer-links">
+            <a href="/shop.html">All Products</a>
+            <a href="/shop.html?filter=new">New Arrivals</a>
+          </nav>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-column-title">About</h4>
+          <nav class="footer-links">
+            <a href="/about.html">Our Story</a>
+            <a href="/journal.html">Journal</a>
+          </nav>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-column-title">Help</h4>
+          <nav class="footer-links">
+            <a href="/contact.html">Contact</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/shipping.html">Shipping</a>
+            <a href="/returns.html">Returns</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 LAHAR. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/lahar.wears" target="_blank">Instagram</a>
+          <a href="https://facebook.com/lahar.wears" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+
+  <script src="/js/app.js"></script>
+  <script>
+    // Product page specific JS
+    document.addEventListener('DOMContentLoaded', () => {
+      // Gallery thumbnail clicks
+      document.querySelectorAll('.gallery-thumbnail').forEach(thumb => {
+        thumb.addEventListener('click', () => {
+          const fullUrl = thumb.dataset.full;
+          document.getElementById('mainImage').src = fullUrl;
+          document.querySelectorAll('.gallery-thumbnail').forEach(t => t.classList.remove('active'));
+          thumb.classList.add('active');
+        });
+      });
+
+      // Color selection
+      document.querySelectorAll('.color-option').forEach(opt => {
+        opt.addEventListener('click', () => {
+          document.querySelectorAll('.color-option').forEach(o => o.classList.remove('active'));
+          opt.classList.add('active');
+          document.getElementById('selectedColorName').textContent = opt.dataset.colorName;
+        });
+      });
+
+      // Size selection
+      document.querySelectorAll('.size-option:not(.disabled)').forEach(opt => {
+        opt.addEventListener('click', () => {
+          document.querySelectorAll('.size-option').forEach(o => o.classList.remove('active'));
+          opt.classList.add('active');
+          document.getElementById('selectedSize').textContent = opt.textContent.trim();
+        });
+      });
+
+      // Quantity controls
+      const qtyInput = document.getElementById('qtyInput');
+      document.getElementById('qtyMinus').addEventListener('click', () => {
+        const val = parseInt(qtyInput.value);
+        if (val > 1) qtyInput.value = val - 1;
+      });
+      document.getElementById('qtyPlus').addEventListener('click', () => {
+        const val = parseInt(qtyInput.value);
+        if (val < 10) qtyInput.value = val + 1;
+      });
+    });
+  </script>
+</body>
+</html>

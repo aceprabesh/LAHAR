@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checkout - LAHAR">
+  <title>Checkout | LAHAR</title>
+
+  <link rel="icon" type="image/svg+xml" href="/assets/svg/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/utilities.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/pages/checkout.css">
+</head>
+<body data-page="checkout">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-logo">
+        <span class="logo-text">LAHAR</span>
+        <span class="logo-tagline">WEAR YOUR WAVE</span>
+      </a>
+    </div>
+  </nav>
+
+  <main id="main-content" class="checkout-page">
+    <div class="container">
+      <header class="checkout-header">
+        <h1>Checkout</h1>
+      </header>
+
+      <form class="checkout-form" id="checkoutForm">
+        <div class="checkout-layout">
+          <!-- Left Column - Form -->
+          <div class="checkout-form-column">
+            <!-- Contact Information -->
+            <section class="checkout-section">
+              <h2 class="checkout-section-title">Contact Information</h2>
+              <div class="input-group">
+                <label class="input-label" for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" class="input" placeholder="Enter your full name" required>
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="email">Email Address *</label>
+                <input type="email" id="email" name="email" class="input" placeholder="your@email.com" required>
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" class="input" placeholder="98XXXXXXXX" required>
+              </div>
+            </section>
+
+            <!-- Delivery Address -->
+            <section class="checkout-section">
+              <h2 class="checkout-section-title">Delivery Address</h2>
+              <div class="input-group">
+                <label class="input-label" for="province">Province *</label>
+                <select id="province" name="province" class="select" required>
+                  <option value="">Select Province</option>
+                  <option value="province-1">Province 1</option>
+                  <option value="province-2">Province 2</option>
+                  <option value="province-3">Province 3</option>
+                  <option value="province-4">Province 4</option>
+                  <option value="province-5">Province 5</option>
+                  <option value="province-6">Province 6</option>
+                  <option value="province-7">Province 7</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="district">District *</label>
+                <input type="text" id="district" name="district" class="input" placeholder="Enter district" required>
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="municipality">Municipality / City *</label>
+                <input type="text" id="municipality" name="municipality" class="input" placeholder="Enter municipality" required>
+              </div>
+              <div class="checkout-form-row">
+                <div class="input-group">
+                  <label class="input-label" for="ward">Ward No.</label>
+                  <input type="text" id="ward" name="ward" class="input" placeholder="Ward">
+                </div>
+                <div class="input-group">
+                  <label class="input-label" for="street">Street Address</label>
+                  <input type="text" id="street" name="street" class="input" placeholder="Street address">
+                </div>
+              </div>
+            </section>
+
+            <!-- Payment Method -->
+            <section class="checkout-section">
+              <h2 class="checkout-section-title">Payment Method</h2>
+
+              <div class="payment-options">
+                <div class="payment-option active" data-payment="esewa">
+                  <div class="payment-radio"></div>
+                  <div class="payment-icon">
+                    <span style="font-weight: 600; font-size: 10px;">eSewa</span>
+                  </div>
+                  <div class="payment-label">
+                    <strong>eSewa</strong>
+                    <span>Pay with your eSewa account</span>
+                  </div>
+                </div>
+
+                <div class="payment-option" data-payment="khalti">
+                  <div class="payment-radio"></div>
+                  <div class="payment-icon">
+                    <span style="font-weight: 600; font-size: 10px;">Khalti</span>
+                  </div>
+                  <div class="payment-label">
+                    <strong>Khalti</strong>
+                    <span>Pay with Khalti digital wallet</span>
+                  </div>
+                </div>
+
+                <div class="payment-option" data-payment="card">
+                  <div class="payment-radio"></div>
+                  <div class="payment-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                  </div>
+                  <div class="payment-label">
+                    <strong>Credit / Debit Card</strong>
+                    <span>Visa, Mastercard, etc.</span>
+                  </div>
+                </div>
+
+                <div class="payment-option" data-payment="cod">
+                  <div class="payment-radio"></div>
+                  <div class="payment-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                  </div>
+                  <div class="payment-label">
+                    <strong>Cash on Delivery</strong>
+                    <span>Pay when you receive</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Payment-specific content (hidden by default) -->
+              <div class="payment-content" data-payment="esewa">
+                <p class="text-muted text-center">You will be redirected to eSewa to complete your payment.</p>
+              </div>
+
+              <div class="payment-content" data-payment="khalti">
+                <p class="text-muted text-center">You will be redirected to Khalti to complete your payment.</p>
+              </div>
+
+              <div class="payment-content" data-payment="card">
+                <div class="input-group">
+                  <label class="input-label" for="cardNumber">Card Number</label>
+                  <input type="text" id="cardNumber" name="cardNumber" class="input" placeholder="1234 5678 9012 3456" maxlength="19">
+                </div>
+                <div class="checkout-form-row">
+                  <div class="input-group">
+                    <label class="input-label" for="expiry">Expiry Date</label>
+                    <input type="text" id="expiry" name="expiry" class="input" placeholder="MM/YY" maxlength="5">
+                  </div>
+                  <div class="input-group">
+                    <label class="input-label" for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" class="input" placeholder="123" maxlength="4">
+                  </div>
+                </div>
+              </div>
+
+              <div class="payment-content" data-payment="cod">
+                <div class="cod-note">
+                  <p>You will pay in cash when your order is delivered. Please ensure someone is available to receive the package.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Right Column - Order Summary -->
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+
+            <div class="order-items" id="orderItems">
+              <!-- Rendered by JS -->
+            </div>
+
+            <div class="order-summary-rows">
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="summarySubtotal">NPR 0</span>
+              </div>
+              <div class="summary-row">
+                <span>Shipping</span>
+                <span id="summaryShipping">Free</span>
+              </div>
+              <div class="summary-row total">
+                <span>Total</span>
+                <span id="summaryTotal">NPR 0</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full place-order-btn">
+              Place Order
+            </button>
+
+            <div class="checkout-secure-note">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              Secure checkout
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 LAHAR. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/lahar.wears" target="_blank">Instagram</a>
+          <a href="https://facebook.com/lahar.wears" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+
+  <script src="/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Payment option selection
+      document.querySelectorAll('.payment-option').forEach(option => {
+        option.addEventListener('click', () => {
+          document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('active'));
+          option.classList.add('active');
+
+          const paymentType = option.dataset.payment;
+          document.querySelectorAll('.payment-content').forEach(content => {
+            content.classList.toggle('hidden', content.dataset.payment !== paymentType);
+          });
+        });
+      });
+
+      // Card number formatting
+      const cardInput = document.getElementById('cardNumber');
+      if (cardInput) {
+        cardInput.addEventListener('input', (e) => {
+          let value = e.target.value.replace(/\s/g, '').replace(/\D/g, '');
+          let formatted = value.match(/.{1,4}/g)?.join(' ') || '';
+          e.target.value = formatted;
+        });
+      }
+
+      // Expiry formatting
+      const expiryInput = document.getElementById('expiry');
+      if (expiryInput) {
+        expiryInput.addEventListener('input', (e) => {
+          let value = e.target.value.replace(/\D/g, '');
+          if (value.length >= 2) {
+            value = value.slice(0, 2) + '/' + value.slice(2, 4);
+          }
+          e.target.value = value;
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+/* ========================================
+   LAHAR - CSS Design Tokens
+   ======================================== */
+
+:root {
+  /* ----------------------------------------
+     COLOR PALETTE
+     ---------------------------------------- */
+  --color-charcoal: #1C1C1A;
+  --color-ivory: #F5F0E8;
+  --color-sand: #D8C7AD;
+  --color-terracotta: #A65D45;
+  --color-sage: #7B8068;
+
+  /* Semantic aliases */
+  --color-text-primary: var(--color-charcoal);
+  --color-text-secondary: #4A4A48;
+  --color-text-muted: #7A7A78;
+  --color-background-primary: var(--color-ivory);
+  --color-background-secondary: var(--color-sand);
+  --color-background-dark: var(--color-charcoal);
+  --color-accent: var(--color-terracotta);
+  --color-accent-soft: var(--color-sage);
+
+  /* ----------------------------------------
+     TYPOGRAPHY
+     ---------------------------------------- */
+  --font-serif: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Type scale */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;     /* 18px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 2rem;        /* 32px */
+  --text-4xl: 2.5rem;      /* 40px */
+  --text-5xl: 3rem;        /* 48px */
+  --text-6xl: 4rem;        /* 64px */
+  --text-7xl: 5rem;        /* 80px */
+  --text-8xl: 6rem;        /* 96px */
+
+  /* Line heights */
+  --leading-none: 1;
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  /* Letter spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+  --tracking-widest: 0.2em;
+  --tracking-logo: 0.3em;
+
+  /* ----------------------------------------
+     SPACING (4px base unit)
+     ---------------------------------------- */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;       /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+  --space-40: 10rem;     /* 160px */
+  --space-48: 12rem;    /* 192px */
+
+  /* ----------------------------------------
+     BREAKPOINTS
+     ---------------------------------------- */
+  --bp-xs: 375px;
+  --bp-sm: 390px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1440px;
+  --bp-2xl: 1920px;
+
+  /* ----------------------------------------
+     LAYOUT
+     ---------------------------------------- */
+  --container-max: 1440px;
+  --container-narrow: 960px;
+  --container-text: 720px;
+  --grid-gap: var(--space-6);
+  --grid-gap-lg: var(--space-8);
+
+  /* ----------------------------------------
+     BORDERS & RADII
+     ---------------------------------------- */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+  --border-thin: 1px solid var(--color-charcoal);
+  --border-thick: 2px solid var(--color-charcoal);
+
+  /* ----------------------------------------
+     SHADOWS (minimal, for depth only)
+     ---------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(28, 28, 26, 0.04);
+  --shadow-md: 0 4px 12px rgba(28, 28, 26, 0.06);
+  --shadow-lg: 0 8px 24px rgba(28, 28, 26, 0.08);
+
+  /* ----------------------------------------
+     TRANSITIONS
+     ---------------------------------------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+  --duration-slowest: 800ms;
+
+  /* ----------------------------------------
+     Z-INDEX SCALE
+     ---------------------------------------- */
+  --z-base: 1;
+  --z-above: 10;
+  --z-nav: 100;
+  --z-drawer: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+
+  /* ----------------------------------------
+     NAVBAR
+     ---------------------------------------- */
+  --nav-height: 72px;
+  --nav-height-scrolled: 60px;
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your LAHAR account - Login or register to manage orders and wishlist.">
+  <title>Account | LAHAR</title>
+
+  <link rel="icon" type="image/svg+xml" href="/assets/svg/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/utilities.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/pages/account.css">
+</head>
+<body data-page="account">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="navbar-menu-toggle" aria-label="Toggle menu">
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </div>
+      <a href="/" class="navbar-logo">
+        <span class="logo-text">LAHAR</span>
+        <span class="logo-tagline">WEAR YOUR WAVE</span>
+      </a>
+      <div class="navbar-nav">
+        <a href="/shop.html">Shop</a>
+        <a href="/shop.html?filter=new">New Arrivals</a>
+        <a href="/shop.html?collection=summer">Collections</a>
+        <a href="/journal.html">Journal</a>
+        <a href="/about.html">About</a>
+      </div>
+      <div class="navbar-icons">
+        <a href="/account.html" class="navbar-icon navbar-icon-account active" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </a>
+        <button class="navbar-icon navbar-icon-bag" aria-label="Shopping bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="bag-count">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content" class="account-page">
+    <div class="container">
+      <header class="account-header">
+        <h1 data-animate="fade-up">My Account</h1>
+      </header>
+
+      <div class="account-layout">
+        <!-- Mobile Navigation -->
+        <div class="account-mobile-nav">
+          <a href="#" class="active" data-tab="login">Login</a>
+          <a href="#" data-tab="register">Register</a>
+        </div>
+
+        <!-- Account Content -->
+        <div class="account-content">
+          <!-- Logged Out State (Login/Register) -->
+          <div class="account-logged-out">
+            <div class="account-tabs">
+              <button class="account-tab active" data-tab="login">Login</button>
+              <button class="account-tab" data-tab="register">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <div class="account-tab-content active" id="loginTab">
+              <form class="account-form" id="loginForm">
+                <div class="input-group">
+                  <label class="input-label" for="loginEmail">Email Address</label>
+                  <input type="email" id="loginEmail" name="email" class="input" placeholder="your@email.com" required>
+                </div>
+                <div class="input-group">
+                  <label class="input-label" for="loginPassword">Password</label>
+                  <input type="password" id="loginPassword" name="password" class="input" placeholder="Enter your password" required>
+                </div>
+                <a href="#" class="account-form-forgot">Forgot your password?</a>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+                <div class="account-form-footer">
+                  <p>Don't have an account? <a href="#" class="switch-to-register">Create one</a></p>
+                </div>
+              </form>
+            </div>
+
+            <!-- Register Form -->
+            <div class="account-tab-content" id="registerTab">
+              <form class="account-form" id="registerForm">
+                <div class="input-group">
+                  <label class="input-label" for="registerName">Full Name</label>
+                  <input type="text" id="registerName" name="name" class="input" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                  <label class="input-label" for="registerEmail">Email Address</label>
+                  <input type="email" id="registerEmail" name="email" class="input" placeholder="your@email.com" required>
+                </div>
+                <div class="input-group">
+                  <label class="input-label" for="registerPassword">Password</label>
+                  <input type="password" id="registerPassword" name="password" class="input" placeholder="Create a password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+                <div class="account-form-footer">
+                  <p>Already have an account? <a href="#" class="switch-to-login">Sign in</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Logged In State -->
+          <div class="account-logged-in hidden">
+            <div class="account-welcome">
+              <h2>Welcome back, <span class="user-name">Guest</span></h2>
+              <p>Manage your orders and account details.</p>
+            </div>
+
+            <!-- Mobile Tabs -->
+            <div class="account-mobile-nav">
+              <a href="#" class="active" data-section="orders">Orders</a>
+              <a href="#" data-section="details">Details</a>
+            </div>
+
+            <!-- Orders Section -->
+            <section class="account-orders" id="ordersSection">
+              <h3>Order History</h3>
+
+              <!-- Sample order -->
+              <div class="order-card">
+                <div class="order-card-header">
+                  <span class="order-number">Order #LAH-2026-001</span>
+                  <span class="order-status completed">Completed</span>
+                </div>
+                <div class="order-card-details">
+                  <span>Aabha Flow Dress - Sand / M</span>
+                  <span>NPR 14,500</span>
+                </div>
+              </div>
+
+              <div class="order-card">
+                <div class="order-card-header">
+                  <span class="order-number">Order #LAH-2026-002</span>
+                  <span class="order-status processing">Processing</span>
+                </div>
+                <div class="order-card-details">
+                  <span>Jureli Wrap Set - Sage / S</span>
+                  <span>NPR 18,900</span>
+                </div>
+              </div>
+            </section>
+
+            <!-- Account Details Section -->
+            <section class="account-details hidden" id="detailsSection">
+              <h3>Account Details</h3>
+              <form class="account-details-form">
+                <div class="input-group">
+                  <label class="input-label" for="accountName">Full Name</label>
+                  <input type="text" id="accountName" name="name" class="input" value="">
+                </div>
+                <div class="input-group">
+                  <label class="input-label" for="accountEmail">Email Address</label>
+                  <input type="email" id="accountEmail" name="email" class="input" value="">
+                </div>
+                <div class="input-group">
+                  <label class="input-label" for="accountPhone">Phone Number</label>
+                  <input type="tel" id="accountPhone" name="phone" class="input" value="">
+                </div>
+                <button type="submit" class="btn btn-secondary">Update Details</button>
+              </form>
+
+              <div style="margin-top: var(--space-8);">
+                <button class="btn btn-text" id="logoutBtn">Sign Out</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 LAHAR. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/lahar.wears" target="_blank">Instagram</a>
+          <a href="https://facebook.com/lahar.wears" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+
+  <script src="/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Tab switching
+      document.querySelectorAll('.account-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          document.querySelectorAll('.account-tab').forEach(t => t.classList.remove('active'));
+          document.querySelectorAll('.account-tab-content').forEach(c => c.classList.remove('active'));
+          tab.classList.add('active');
+          document.getElementById(tab.dataset.tab + 'Tab').classList.add('active');
+        });
+      });
+
+      // Mobile section switching
+      document.querySelectorAll('.account-mobile-nav a').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const section = link.dataset.section;
+          if (section) {
+            document.querySelectorAll('.account-mobile-nav a').forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            document.getElementById('ordersSection').classList.toggle('hidden', section !== 'orders');
+            document.getElementById('detailsSection').classList.toggle('hidden', section !== 'details');
+          }
+        });
+      });
+
+      // Switch between login/register
+      document.querySelector('.switch-to-register')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('[data-tab="register"]').click();
+      });
+
+      document.querySelector('.switch-to-login')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('[data-tab="login"]').click();
+      });
+    });
+  </script>
+</body>
+</html>

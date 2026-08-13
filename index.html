@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LAHAR - Nepali women's fashion brand. Wear your wave. Contemporary clothing inspired by movement, flow, and Himalayan heritage.">
+  <title>LAHAR | WEAR YOUR WAVE</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/svg/logo.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/utilities.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/pages/home.css">
+</head>
+<body data-page="home">
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <!-- Mobile Menu Toggle -->
+      <div class="navbar-menu-toggle" aria-label="Toggle menu">
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </div>
+
+      <!-- Logo -->
+      <a href="/" class="navbar-logo">
+        <span class="logo-text">LAHAR</span>
+        <span class="logo-tagline">WEAR YOUR WAVE</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="navbar-nav">
+        <a href="/shop.html">Shop</a>
+        <a href="/shop.html?filter=new">New Arrivals</a>
+        <a href="/shop.html?collection=summer">Collections</a>
+        <a href="/journal.html">Journal</a>
+        <a href="/about.html">About</a>
+      </div>
+
+      <!-- Navbar Icons -->
+      <div class="navbar-icons">
+        <button class="navbar-icon navbar-icon-search" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a href="/account.html" class="navbar-icon navbar-icon-account" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+        <button class="navbar-icon navbar-icon-wishlist" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+        <button class="navbar-icon navbar-icon-bag" aria-label="Shopping bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="bag-count">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-nav">
+      <a href="/shop.html">Shop</a>
+      <a href="/shop.html?filter=new">New Arrivals</a>
+      <a href="/shop.html?collection=summer">Collections</a>
+      <a href="/journal.html">Journal</a>
+      <a href="/about.html">About</a>
+    </div>
+    <div class="mobile-menu-footer">
+      <div class="mobile-menu-social">
+        <a href="https://instagram.com/lahar.wears" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com/lahar.wears" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <span class="mobile-menu-tagline">WEAR YOUR WAVE</span>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay">
+    <div class="search-form">
+      <div class="search-input-wrapper">
+        <input type="text" class="search-input" placeholder="Search LAHAR...">
+        <button class="search-close" aria-label="Close search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="search-results">
+        <p class="search-results-title">Popular Searches</p>
+        <p class="text-muted">Linen dress, Wrap top, Trousers, New arrivals</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="drawer-overlay"></div>
+  <div class="cart-drawer drawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Shopping Bag</h3>
+      <button class="drawer-close" aria-label="Close bag">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-drawer-body">
+      <!-- Cart items rendered by JS -->
+    </div>
+    <div class="cart-drawer-footer" style="display: none;">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span class="cart-subtotal-amount">NPR 0</span>
+      </div>
+      <div class="cart-drawer-actions">
+        <a href="/checkout.html" class="btn btn-primary btn-full">Checkout</a>
+        <a href="/cart.html" class="btn btn-secondary btn-full">View Bag</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1920&q=80" alt="Fashion editorial - woman in flowing dress" loading="eager">
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content" data-animate="fade-up">
+        <div class="hero-logo">
+          <h1 class="logo-text">LAHAR</h1>
+          <p class="logo-tagline">WEAR YOUR WAVE</p>
+        </div>
+        <p class="hero-tagline">"Designed to move with you."</p>
+        <div class="hero-cta">
+          <a href="/shop.html" class="btn btn-primary btn-wave">Shop Collection</a>
+          <a href="/about.html" class="btn btn-secondary btn-wave">Discover LAHAR</a>
+        </div>
+      </div>
+
+      <!-- Animated wave line -->
+      <div class="hero-wave">
+        <svg width="200" height="30" viewBox="0 0 200 30" fill="none">
+          <path class="animate-flow-wave" d="M0,15 Q25,5 50,15 T100,15 T150,15 T200,15" stroke="#1C1C1A" stroke-width="1" fill="none" stroke-dasharray="250 250"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- NEW COLLECTION SECTION -->
+    <section class="section-new-collection section">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <h2>New Collection</h2>
+          <p>A study in movement, texture and modern femininity.</p>
+        </div>
+
+        <div class="products-grid" data-animate-stagger>
+          <!-- Products loaded by JS -->
+        </div>
+
+        <div class="text-center mt-12" data-animate="fade-up">
+          <a href="/shop.html?filter=new" class="btn btn-text btn-wave">View All New Arrivals →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITORIAL STATEMENT SECTION -->
+    <section class="section-editorial section-lg">
+      <div class="container">
+        <div class="editorial-text" data-animate="fade-up">
+          LAHAR ISN'T JUST WHAT YOU WEAR.<br>
+          IT'S HOW YOU FLOW.
+        </div>
+        <div class="editorial-wave" data-animate="fade-up" style="transition-delay: 200ms;">
+          <svg viewBox="0 0 200 30" fill="none">
+            <path class="animate-draw-line" d="M0,15 Q50,5 100,15 T200,15" stroke="#D8C7AD" stroke-width="1.5" fill="none" stroke-dasharray="300"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section class="section-categories section">
+      <div class="container">
+        <div class="categories-grid">
+          <div class="category-card" data-animate="fade-up">
+            <div class="category-card-image">
+              <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80" alt="Dresses collection" loading="lazy">
+            </div>
+            <div class="category-card-overlay">
+              <h3 class="category-card-title">Dresses</h3>
+              <span class="category-card-link">Shop Now →</span>
+            </div>
+            <a href="/shop.html?category=dresses" class="category-card-link-overlay"></a>
+          </div>
+
+          <div class="category-card" data-animate="fade-up" style="transition-delay: 100ms;">
+            <div class="category-card-image">
+              <img src="https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=800&q=80" alt="Tops collection" loading="lazy">
+            </div>
+            <div class="category-card-overlay">
+              <h3 class="category-card-title">Tops</h3>
+              <span class="category-card-link">Shop Now →</span>
+            </div>
+            <a href="/shop.html?category=tops" class="category-card-link-overlay"></a>
+          </div>
+
+          <div class="category-card" data-animate="fade-up" style="transition-delay: 200ms;">
+            <div class="category-card-image">
+              <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80" alt="Bottoms collection" loading="lazy">
+            </div>
+            <div class="category-card-overlay">
+              <h3 class="category-card-title">Bottoms</h3>
+              <span class="category-card-link">Shop Now →</span>
+            </div>
+            <a href="/shop.html?category=bottoms" class="category-card-link-overlay"></a>
+          </div>
+
+          <div class="category-card" data-animate="fade-up" style="transition-delay: 300ms;">
+            <div class="category-card-image">
+              <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&q=80" alt="Sets collection" loading="lazy">
+            </div>
+            <div class="category-card-overlay">
+              <h3 class="category-card-title">Sets</h3>
+              <span class="category-card-link">Shop Now →</span>
+            </div>
+            <a href="/shop.html?category=sets" class="category-card-link-overlay"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAHAR STORY SECTION -->
+    <section class="section-story section">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-image" data-animate="fade-up">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Flowing fabric texture" loading="lazy">
+          </div>
+          <div class="story-content" data-animate="fade-up" style="transition-delay: 150ms;">
+            <h2>The LAHAR Story</h2>
+            <p class="quote">"Born from movement, shaped by individuality."</p>
+            <p>LAHAR draws inspiration from the Nepali word for wave — a reminder that style, like water, finds its own path. We create clothing that moves with you, not against you.</p>
+            <p>Each piece is designed in Kathmandu, crafted for the modern woman who values both heritage and contemporary expression.</p>
+            <a href="/about.html" class="btn btn-text btn-wave">Our Story →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLECTION EDITORIAL SECTION -->
+    <section class="section-editorial-collection section">
+      <div class="container">
+        <div class="editorial-collection-grid">
+          <div class="editorial-card" data-animate="fade-up">
+            <div class="editorial-card-image">
+              <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=1200&q=80" alt="Editorial fashion photography" loading="lazy">
+            </div>
+          </div>
+          <div class="editorial-card" data-animate="fade-up" style="transition-delay: 100ms;">
+            <div class="editorial-card-image">
+              <img src="https://images.unsplash.com/photo-1519245659620-e859806a8d3b?w=600&q=80" alt="Fashion editorial" loading="lazy">
+            </div>
+          </div>
+          <div class="editorial-card" data-animate="fade-up" style="transition-delay: 200ms;">
+            <div class="editorial-card-image">
+              <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&q=80" alt="Fashion editorial" loading="lazy">
+            </div>
+          </div>
+          <div class="editorial-card" data-animate="fade-up" style="transition-delay: 300ms;">
+            <div class="editorial-card-image">
+              <img src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=600&q=80" alt="Fashion editorial" loading="lazy">
+            </div>
+          </div>
+          <div class="editorial-card" data-animate="fade-up" style="transition-delay: 400ms;">
+            <div class="editorial-card-image">
+              <img src="https://images.unsplash.com/photo-1562572159-4efd90232581?w=600&q=80" alt="Fashion editorial" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESSENTIALS SECTION -->
+    <section class="section-new-collection section" style="background: var(--color-ivory);">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <h2>Essentials</h2>
+          <p>Foundation pieces for a wardrobe that flows.</p>
+        </div>
+
+        <div class="products-grid featured-products-grid" data-animate-stagger>
+          <!-- Products loaded by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND PHILOSOPHY SECTION -->
+    <section class="section-philosophy section-lg">
+      <div class="container">
+        <h2 class="philosophy-title" data-animate="fade-up">WEAR YOUR WAVE</h2>
+        <p class="philosophy-quote" data-animate="fade-up" style="transition-delay: 100ms;">
+          "Your style doesn't need permission to move."
+        </p>
+        <div class="philosophy-waves" data-animate="fade-up" style="transition-delay: 200ms;">
+          <svg viewBox="0 0 100 20" fill="none">
+            <path d="M0,10 Q25,2 50,10 T100,10" stroke="currentColor" stroke-width="1" fill="none"/>
+          </svg>
+          <svg viewBox="0 0 100 20" fill="none">
+            <path d="M0,10 Q25,18 50,10 T100,10" stroke="currentColor" stroke-width="1" fill="none"/>
+          </svg>
+          <svg viewBox="0 0 100 20" fill="none">
+            <path d="M0,10 Q25,2 50,10 T100,10" stroke="currentColor" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNAL SECTION -->
+    <section class="section-journal section">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <h2>Journal</h2>
+          <p>Stories of movement, craft, and quiet moments.</p>
+        </div>
+
+        <div class="journal-grid" data-animate-stagger>
+          <article class="journal-card" data-animate="fade-up">
+            <div class="journal-card-image">
+              <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=600&q=80" alt="The Art of Movement" loading="lazy">
+            </div>
+            <span class="journal-card-category">Philosophy</span>
+            <h3 class="journal-card-title">The Art of Movement</h3>
+            <p class="journal-card-excerpt">How the clothes we wear reflect the lives we want to live.</p>
+          </article>
+
+          <article class="journal-card" data-animate="fade-up" style="transition-delay: 100ms;">
+            <div class="journal-card-image">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="A Story in Fabric" loading="lazy">
+            </div>
+            <span class="journal-card-category">Craft</span>
+            <h3 class="journal-card-title">A Story in Fabric</h3>
+            <p class="journal-card-excerpt">From Himalayan valleys to your wardrobe.</p>
+          </article>
+
+          <article class="journal-card" data-animate="fade-up" style="transition-delay: 200ms;">
+            <div class="journal-card-image">
+              <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80" alt="Dressing Your Own Wave" loading="lazy">
+            </div>
+            <span class="journal-card-category">Style</span>
+            <h3 class="journal-card-title">Dressing Your Own Wave</h3>
+            <p class="journal-card-excerpt">Personal expression isn't about following trends.</p>
+          </article>
+        </div>
+
+        <div class="text-center mt-12" data-animate="fade-up">
+          <a href="/journal.html" class="btn btn-text btn-wave">Read All Stories →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM/SOCIAL SECTION -->
+    <section class="section-social section">
+      <div class="container">
+        <div class="social-header" data-animate="fade-up">
+          <h2>Follow the Wave</h2>
+          <a href="https://instagram.com/lahar.wears" target="_blank" rel="noopener">@lahar.wears</a>
+        </div>
+
+        <div class="social-grid" data-animate-stagger>
+          <div class="social-item" data-animate="fade-up">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Instagram" loading="lazy">
+          </div>
+          <div class="social-item" data-animate="fade-up" style="transition-delay: 50ms;">
+            <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=400&q=80" alt="Instagram" loading="lazy">
+          </div>
+          <div class="social-item" data-animate="fade-up" style="transition-delay: 100ms;">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&q=80" alt="Instagram" loading="lazy">
+          </div>
+          <div class="social-item" data-animate="fade-up" style="transition-delay: 150ms;">
+            <img src="https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=600&q=80" alt="Instagram" loading="lazy">
+          </div>
+          <div class="social-item" data-animate="fade-up" style="transition-delay: 200ms;">
+            <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&q=80" alt="Instagram" loading="lazy">
+          </div>
+          <div class="social-item" data-animate="fade-up" style="transition-delay: 250ms;">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&q=80" alt="Instagram" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="section-newsletter section">
+      <div class="container">
+        <div class="newsletter-section" data-animate="fade-up">
+          <h2>Join the LAHAR World</h2>
+          <p>New collections, stories and quiet moments — delivered occasionally.</p>
+          <form class="newsletter-form" method="POST">
+            <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary">Join</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2 class="footer-logo">LAHAR</h2>
+          <p class="footer-tagline">WEAR YOUR WAVE</p>
+          <p class="footer-description">Contemporary Nepali fashion for the modern woman. Designed in Kathmandu, worn worldwide.</p>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-column-title">Shop</h4>
+          <nav class="footer-links">
+            <a href="/shop.html">All Products</a>
+            <a href="/shop.html?filter=new">New Arrivals</a>
+            <a href="/shop.html?category=dresses">Dresses</a>
+            <a href="/shop.html?category=tops">Tops</a>
+            <a href="/shop.html?category=bottoms">Bottoms</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-column-title">About</h4>
+          <nav class="footer-links">
+            <a href="/about.html">Our Story</a>
+            <a href="/journal.html">Journal</a>
+            <a href="/about.html#sustainability">Sustainability</a>
+            <a href="/about.html#craft">Artisan Partners</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-column-title">Help</h4>
+          <nav class="footer-links">
+            <a href="/contact.html">Contact Us</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/shipping.html">Shipping</a>
+            <a href="/returns.html">Returns</a>
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-wave">
+        <svg viewBox="0 0 200 20" fill="none">
+          <path d="M0,10 Q50,2 100,10 T200,10" stroke="rgba(245,240,232,0.2)" stroke-width="1" fill="none"/>
+        </svg>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 LAHAR. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/lahar.wears" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://facebook.com/lahar.wears" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://tiktok.com/@lahar.wears" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="/js/app.js"></script>
+</body>
+</html>

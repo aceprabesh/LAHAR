@@ -1,0 +1,336 @@
+/* ========================================
+   LAHAR - Checkout Page Styles
+   ======================================== */
+
+.checkout-page {
+  padding-top: var(--nav-height);
+  min-height: 100vh;
+  background: var(--color-ivory);
+}
+
+.checkout-header {
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--color-sand);
+  text-align: center;
+}
+
+.checkout-header h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  font-weight: 400;
+}
+
+/* ----------------------------------------
+   CHECKOUT LAYOUT
+   ---------------------------------------- */
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  padding: var(--space-8) 0;
+}
+
+@media (min-width: 1024px) {
+  .checkout-layout {
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-16);
+    padding: var(--space-12) 0;
+  }
+}
+
+/* ----------------------------------------
+   CHECKOUT FORM SECTIONS
+   ---------------------------------------- */
+.checkout-section {
+  margin-bottom: var(--space-8);
+}
+
+.checkout-section-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-sand);
+}
+
+/* ----------------------------------------
+   FORM STYLES
+   ---------------------------------------- */
+.checkout-form .input-group {
+  margin-bottom: var(--space-5);
+}
+
+.checkout-form .input-label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  margin-bottom: var(--space-2);
+}
+
+.checkout-form .input,
+.checkout-form .select {
+  width: 100%;
+  padding: var(--space-4);
+  border: 1px solid var(--color-sand);
+  background: var(--color-ivory);
+  font-size: var(--text-base);
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.checkout-form .input:focus,
+.checkout-form .select:focus {
+  outline: none;
+  border-color: var(--color-charcoal);
+}
+
+.checkout-form .select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231C1C1A' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  padding-right: var(--space-10);
+}
+
+.checkout-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.checkout-form-row.three-col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* ----------------------------------------
+   PAYMENT OPTIONS
+   ---------------------------------------- */
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border: 1px solid var(--color-sand);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.payment-option:hover {
+  border-color: var(--color-charcoal);
+}
+
+.payment-option.active {
+  border-color: var(--color-charcoal);
+  background: var(--color-sand);
+}
+
+.payment-radio {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-charcoal);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.payment-option.active .payment-radio::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: var(--color-charcoal);
+  border-radius: 50%;
+}
+
+.payment-icon {
+  width: 40px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-ivory);
+  border-radius: var(--radius-sm);
+}
+
+.payment-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.payment-label {
+  flex: 1;
+}
+
+.payment-label strong {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+}
+
+.payment-label span {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* Payment-specific content */
+.payment-content {
+  padding: var(--space-6);
+  background: var(--color-sand);
+  margin-top: var(--space-4);
+  display: none;
+}
+
+.payment-content.active {
+  display: block;
+}
+
+/* eSewa / Khalti QR placeholder */
+.payment-qr-placeholder {
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.payment-qr-placeholder p {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-4);
+}
+
+/* COD note */
+.cod-note {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  padding: var(--space-4);
+  background: rgba(122, 128, 104, 0.1);
+  border-left: 2px solid var(--color-sage);
+}
+
+/* ----------------------------------------
+   ORDER SUMMARY
+   ---------------------------------------- */
+.order-summary {
+  background: var(--color-sand);
+  padding: var(--space-8);
+  height: fit-content;
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-8));
+}
+
+.order-summary h2 {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-6);
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid rgba(28, 28, 26, 0.1);
+}
+
+.order-item {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.order-item-image {
+  width: 60px;
+  height: 80px;
+  background: var(--color-ivory);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.order-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.order-item-details {
+  flex: 1;
+}
+
+.order-item-name {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+}
+
+.order-item-variant {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.order-item-price {
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.order-summary-rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+}
+
+.summary-row.total {
+  border-top: 1px solid var(--color-charcoal);
+  padding-top: var(--space-4);
+  margin-top: var(--space-4);
+  font-weight: 600;
+  font-size: var(--text-base);
+}
+
+.place-order-btn {
+  width: 100%;
+  margin-top: var(--space-6);
+}
+
+.checkout-secure-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* ----------------------------------------
+   CHECKOUT SUCCESS (Placeholder)
+   ---------------------------------------- */
+.checkout-success {
+  text-align: center;
+  padding: var(--space-16) var(--space-4);
+}
+
+.checkout-success h1 {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-4);
+}
+
+.checkout-success p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+}

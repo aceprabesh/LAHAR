@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your shopping bag - LAHAR">
+  <title>Shopping Bag | LAHAR</title>
+
+  <link rel="icon" type="image/svg+xml" href="/assets/svg/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/utilities.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/pages/cart.css">
+</head>
+<body data-page="cart">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="navbar-menu-toggle" aria-label="Toggle menu">
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </div>
+      <a href="/" class="navbar-logo">
+        <span class="logo-text">LAHAR</span>
+        <span class="logo-tagline">WEAR YOUR WAVE</span>
+      </a>
+      <div class="navbar-nav">
+        <a href="/shop.html">Shop</a>
+        <a href="/shop.html?filter=new">New Arrivals</a>
+        <a href="/shop.html?collection=summer">Collections</a>
+        <a href="/journal.html">Journal</a>
+        <a href="/about.html">About</a>
+      </div>
+      <div class="navbar-icons">
+        <a href="/account.html" class="navbar-icon navbar-icon-account" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </a>
+        <button class="navbar-icon navbar-icon-bag" aria-label="Shopping bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="bag-count">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content" class="cart-page">
+    <div class="container">
+      <header class="cart-header">
+        <h1>Shopping Bag</h1>
+        <p id="cartItemCount">0 items</p>
+      </header>
+
+      <div class="cart-layout">
+        <!-- Cart Items -->
+        <div class="cart-items cart-page-content" id="cartItemsContainer">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+          <h2>Order Summary</h2>
+          <div class="cart-summary-row">
+            <span>Subtotal</span>
+            <span class="cart-subtotal-total" id="cartSubtotal">NPR 0</span>
+          </div>
+          <div class="cart-summary-row">
+            <span>Shipping</span>
+            <span>Calculated at checkout</span>
+          </div>
+          <div class="cart-summary-row total">
+            <span>Total</span>
+            <span class="cart-total" id="cartTotal">NPR 0</span>
+          </div>
+          <div class="cart-summary-actions">
+            <a href="/checkout.html" class="btn btn-primary btn-full">Proceed to Checkout</a>
+            <a href="/shop.html" class="btn btn-secondary btn-full">Continue Shopping</a>
+          </div>
+          <p class="cart-summary-note">Taxes and shipping calculated at checkout</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2 class="footer-logo">LAHAR</h2>
+          <p class="footer-tagline">WEAR YOUR WAVE</p>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-column-title">Shop</h4>
+          <nav class="footer-links">
+            <a href="/shop.html">All Products</a>
+            <a href="/shop.html?filter=new">New Arrivals</a>
+          </nav>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-column-title">About</h4>
+          <nav class="footer-links">
+            <a href="/about.html">Our Story</a>
+            <a href="/journal.html">Journal</a>
+          </nav>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-column-title">Help</h4>
+          <nav class="footer-links">
+            <a href="/contact.html">Contact</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/shipping.html">Shipping</a>
+            <a href="/returns.html">Returns</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 LAHAR. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/lahar.wears" target="_blank">Instagram</a>
+          <a href="https://facebook.com/lahar.wears" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container"></div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
