@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAHAR Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>LAHAR</h1>
+        <span>Admin Panel</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-section="dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          Dashboard
+        </a>
+        <a href="#" class="nav-item" data-section="products">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          Products
+        </a>
+        <a href="#" class="nav-item" data-section="orders">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          Orders
+        </a>
+        <a href="#" class="nav-item" data-section="customers">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          Customers
+        </a>
+        <a href="#" class="nav-item" data-section="settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.77l-.27.27a2 2 0 0 1-2.83 0l-.27-.27a1.65 1.65 0 0 0-1.77-.33 1.65 1.65 0 0 0-1 1.77V17a2 2 0 0 1-2.83 0"></path></svg>
+          Settings
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="/">← Back to Store</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Dashboard Section -->
+      <section id="dashboard" class="admin-section active">
+        <h2>Dashboard</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-value" id="totalOrders">0</span>
+            <span class="stat-label">Total Orders</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="totalRevenue">NPR 0</span>
+            <span class="stat-label">Revenue</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="totalProducts">0</span>
+            <span class="stat-label">Products</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="totalCustomers">0</span>
+            <span class="stat-label">Customers</span>
+          </div>
+        </div>
+        <div class="recent-orders">
+          <h3>Recent Orders</h3>
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Order #</th>
+                <th>Customer</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="recentOrdersTable">
+              <tr><td colspan="5" class="empty-state">No orders yet</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Products Section -->
+      <section id="products" class="admin-section">
+        <div class="section-header">
+          <h2>Products</h2>
+          <button class="btn btn-primary" onclick="showProductModal()">+ Add Product</button>
+        </div>
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="productsTable">
+            <tr><td colspan="7" class="empty-state">Loading products...</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Orders Section -->
+      <section id="orders" class="admin-section">
+        <h2>Orders</h2>
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Order #</th>
+              <th>Customer</th>
+              <th>Items</th>
+              <th>Total</th>
+              <th>Payment</th>
+              <th>Status</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="ordersTable">
+            <tr><td colspan="7" class="empty-state">Loading orders...</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Settings Section -->
+      <section id="settings" class="admin-section">
+        <h2>Settings</h2>
+        <form class="settings-form">
+          <div class="form-group">
+            <label>Store Name</label>
+            <input type="text" value="LAHAR">
+          </div>
+          <div class="form-group">
+            <label>API URL</label>
+            <input type="text" placeholder="https://api.lahar.com">
+          </div>
+          <div class="form-group">
+            <label>eSewa Merchant ID</label>
+            <input type="text" placeholder="Your eSewa Merchant ID">
+          </div>
+          <div class="form-group">
+            <label>Khalti Public Key</label>
+            <input type="text" placeholder="Your Khalti Public Key">
+          </div>
+          <button type="submit" class="btn btn-primary">Save Settings</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <!-- Product Modal -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Add Product</h3>
+        <button class="modal-close" onclick="closeProductModal()">&times;</button>
+      </div>
+      <form class="modal-form">
+        <div class="form-group">
+          <label>Product Name</label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="form-group">
+          <label>Slug</label>
+          <input type="text" name="slug" required>
+        </div>
+        <div class="form-group">
+          <label>Category</label>
+          <select name="category_id">
+            <option value="1">Kurtha</option>
+            <option value="2">Dresses</option>
+            <option value="3">Tops</option>
+            <option value="4">Bottoms</option>
+            <option value="5">Sets</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Price (NPR)</label>
+            <input type="number" name="price" required>
+          </div>
+          <div class="form-group">
+            <label>Stock</label>
+            <input type="number" name="stock" value="0">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea name="description" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Image URL</label>
+          <input type="text" name="image_url">
+        </div>
+        <div class="form-group checkbox-group">
+          <label>
+            <input type="checkbox" name="featured"> Featured
+          </label>
+          <label>
+            <input type="checkbox" name="new_arrival"> New Arrival
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Save Product</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
