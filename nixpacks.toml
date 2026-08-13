@@ -1,0 +1,9 @@
+[phases]
+build = """
+  apt install -y nginx php php-fpm php-mysql php-sqlite3
+  cp -r . /var/www
+  chmod +x /var/www/start.sh
+"""
+
+[start]
+command = "/var/www/start.sh"

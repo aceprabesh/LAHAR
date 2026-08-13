@@ -13,8 +13,7 @@
 
 const API_CONFIG = {
   // Base URL for all API requests
-  // Replace with: 'https://api.lahar.com/api' or your PHP server URL
-  BASE_URL: '/api',
+  BASE_URL: 'https://lahar-api.up.railway.app/api',
 
   // API Version (for future-proofing)
   VERSION: 'v1',

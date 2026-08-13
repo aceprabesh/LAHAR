@@ -1,0 +1,11 @@
+[build]
+builder = "nixpacks"
+builderCommand = "nixpacks build"
+startCommand = "php -S 0.0.0.0:$PORT -t public"
+
+[deploy]
+healthcheckPath = "/"
+healthcheckTimeout = 30
+
+[environment]
+PORT = "8080"

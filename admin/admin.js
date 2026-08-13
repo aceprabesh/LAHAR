@@ -3,7 +3,7 @@
  */
 
 // API Base URL - Update this to your backend
-const API_URL = 'https://your-api-domain.com/api';
+const API_URL = process.env.API_URL || 'https://lahar-api.up.railway.app/api';
 
 // Navigation
 document.querySelectorAll('.nav-item').forEach(item => {
