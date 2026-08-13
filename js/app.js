@@ -17,7 +17,7 @@ const PRODUCTS = [
     slug: "aabha-flow-dress",
     price: 14500,
     category: "dresses",
-    images: ["https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80", "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=800&q=80"],
+    images: ["/assets/images/product-1.jpg", "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=800&q=80"],
     colors: [{ name: "Sand", hex: "#D8C7AD" }, { name: "Terracotta", hex: "#A65D45" }],
     sizes: ["XS", "S", "M", "L", "XL"],
     featured: true,
