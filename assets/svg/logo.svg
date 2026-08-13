@@ -1,29 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" fill="none">
-  <!-- LAHAR Logo with integrated wave -->
-  <defs>
-    <path id="wave-path" d="M0,40 Q25,25 50,40 T100,40 T150,40 T200,40 T250,40 T300,40 T350,40 T400,40" stroke="#1C1C1A" stroke-width="1" fill="none"/>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- LAHAR Primary Logo -->
+  <!-- Wave flowing through letters -->
+
+  <!-- Wave path - the flowing ribbon element -->
+  <path d="M-10,75 Q50,55 100,65 T200,55 T300,70 T410,50"
+        stroke="#1C1C1A" stroke-width="1.5" fill="none"
+        stroke-linecap="round"/>
 
   <!-- L -->
-  <text x="10" y="55" font-family="Cormorant Garamond, serif" font-size="48" font-weight="400" letter-spacing="8" fill="#1C1C1A">L</text>
-  <path d="M10,58 Q20,55 35,60 T55,58" stroke="#1C1C1A" stroke-width="1" fill="none" opacity="0.3"/>
+  <text x="15" y="68" font-family="Georgia, 'Times New Roman', serif"
+        font-size="52" font-weight="400" letter-spacing="6" fill="#1C1C1A">L</text>
+
+  <!-- Wave accent over A -->
+  <path d="M62,70 Q72,62 82,70" stroke="#1C1C1A" stroke-width="1.5" fill="none"/>
 
   <!-- A -->
-  <text x="55" y="55" font-family="Cormorant Garamond, serif" font-size="48" font-weight="400" letter-spacing="8" fill="#1C1C1A">A</text>
-  <path d="M60,58 Q75,62 85,56 T100,60" stroke="#1C1C1A" stroke-width="1" fill="none" opacity="0.3"/>
+  <text x="80" y="68" font-family="Georgia, 'Times New Roman', serif"
+        font-size="52" font-weight="400" letter-spacing="6" fill="#1C1C1A">A</text>
+
+  <!-- Wave accent over H -->
+  <path d="M148,70 Q158,62 168,70" stroke="#1C1C1A" stroke-width="1.5" fill="none"/>
 
   <!-- H -->
-  <text x="105" y="55" font-family="Cormorant Garamond, serif" font-size="48" font-weight="400" letter-spacing="8" fill="#1C1C1A">H</text>
-  <path d="M110,56 Q125,52 140,58 T170,54" stroke="#1C1C1A" stroke-width="1" fill="none" opacity="0.3"/>
+  <text x="166" y="68" font-family="Georgia, 'Times New Roman', serif"
+        font-size="52" font-weight="400" letter-spacing="6" fill="#1C1C1A">H</text>
+
+  <!-- Wave accent over A -->
+  <path d="M234,70 Q244,62 254,70" stroke="#1C1C1A" stroke-width="1.5" fill="none"/>
 
   <!-- A -->
-  <text x="175" y="55" font-family="Cormorant Garamond, serif" font-size="48" font-weight="400" letter-spacing="8" fill="#1C1C1A">A</text>
-  <path d="M180,58 Q195,54 210,60 T240,56" stroke="#1C1C1A" stroke-width="1" fill="none" opacity="0.3"/>
+  <text x="252" y="68" font-family="Georgia, 'Times New Roman', serif"
+        font-size="52" font-weight="400" letter-spacing="6" fill="#1C1C1A">A</text>
+
+  <!-- Wave accent over R -->
+  <path d="M320,70 Q330,62 340,70" stroke="#1C1C1A" stroke-width="1.5" fill="none"/>
 
   <!-- R -->
-  <text x="245" y="55" font-family="Cormorant Garamond, serif" font-size="48" font-weight="400" letter-spacing="8" fill="#1C1C1A">R</text>
-  <path d="M250,56 Q270,52 285,58 T320,54" stroke="#1C1C1A" stroke-width="1" fill="none" opacity="0.3"/>
+  <text x="338" y="68" font-family="Georgia, 'Times New Roman', serif"
+        font-size="52" font-weight="400" letter-spacing="6" fill="#1C1C1A">R</text>
 
-  <!-- Wave line under logo -->
-  <path d="M10,68 Q50,62 100,68 T190,68 T280,68 T370,68 T400,68" stroke="#D8C7AD" stroke-width="1.5" fill="none"/>
+  <!-- Tagline - WEAR YOUR WAVE -->
+  <text x="200" y="100" font-family="Arial, Helvetica, sans-serif"
+        font-size="9" font-weight="500" letter-spacing="4" fill="#1C1C1A"
+        text-anchor="middle">WEAR YOUR WAVE</text>
+
+  <!-- Decorative wave line under tagline -->
+  <path d="M120,108 Q200,100 280,108" stroke="#1C1C1A" stroke-width="0.75" fill="none"/>
 </svg>

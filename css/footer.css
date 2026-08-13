@@ -44,20 +44,22 @@
 }
 
 .footer-logo {
-  font-family: var(--font-serif);
-  font-size: 2rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.8rem;
   font-weight: 400;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
+  color: var(--color-ivory);
 }
 
 .footer-tagline {
   font-family: var(--font-sans);
-  font-size: var(--text-xs);
+  font-size: 0.6rem;
   font-weight: 500;
-  letter-spacing: var(--tracking-widest);
+  letter-spacing: 0.4em;
   text-transform: uppercase;
+  color: rgba(245, 240, 232, 0.6);
   color: rgba(245, 240, 232, 0.5);
   margin-bottom: var(--space-6);
 }

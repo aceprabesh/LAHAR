@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- LAHAR Secondary Logo (Dark Background) -->
+
+  <!-- Wave path - the flowing ribbon element -->
+  <path d="M-10,75 Q50,55 100,65 T200,55 T300,70 T410,50"
+        stroke="#F5F0E8" stroke-width="1.5" fill="none"
+        stroke-linecap="round"/>
+
+  <!-- L -->
+  <text x="15" y="68" font-family="Georgia, 'Times New Roman', serif"
+        font-size="52" font-weight="400" letter-spacing="6" fill="#F5F0E8">L</text>
+
+  <!-- Wave accent over A -->
+  <path d="M62,70 Q72,62 82,70" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
+
+  <!-- A -->
+  <text x="80" y="68" font-family="Georgia, 'Times New Roman', serif"
+        font-size="52" font-weight="400" letter-spacing="6" fill="#F5F0E8">A</text>
+
+  <!-- Wave accent over H -->
+  <path d="M148,70 Q158,62 168,70" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
+
+  <!-- H -->
+  <text x="166" y="68" font-family="Georgia, 'Times New Roman', serif"
+        font-size="52" font-weight="400" letter-spacing="6" fill="#F5F0E8">H</text>
+
+  <!-- Wave accent over A -->
+  <path d="M234,70 Q244,62 254,70" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
+
+  <!-- A -->
+  <text x="252" y="68" font-family="Georgia, 'Times New Roman', serif"
+        font-size="52" font-weight="400" letter-spacing="6" fill="#F5F0E8">A</text>
+
+  <!-- Wave accent over R -->
+  <path d="M320,70 Q330,62 340,70" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
+
+  <!-- R -->
+  <text x="338" y="68" font-family="Georgia, 'Times New Roman', serif"
+        font-size="52" font-weight="400" letter-spacing="6" fill="#F5F0E8">R</text>
+
+  <!-- Tagline - WEAR YOUR WAVE -->
+  <text x="200" y="100" font-family="Arial, Helvetica, sans-serif"
+        font-size="9" font-weight="500" letter-spacing="4" fill="#F5F0E8"
+        text-anchor="middle">WEAR YOUR WAVE</text>
+
+  <!-- Decorative wave line under tagline -->
+  <path d="M120,108 Q200,100 280,108" stroke="#F5F0E8" stroke-width="0.75" fill="none"/>
+</svg>
