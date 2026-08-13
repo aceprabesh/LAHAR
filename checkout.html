@@ -269,6 +269,23 @@
         });
       }
     });
+
+    // Render cart items on checkout
+    const orderItems = document.getElementById('orderItems');
+    if (orderItems && typeof Cart !== 'undefined' && Cart.items.length > 0) {
+      orderItems.innerHTML = Cart.items.map(item => `
+        <div class="order-item">
+          <div class="order-item-image"><img src="${item.image}" alt="${item.name}"></div>
+          <div class="order-item-details">
+            <p class="order-item-name">${item.name}</p>
+            <p class="order-item-variant">${item.color} / ${item.size} × ${item.quantity}</p>
+            <p class="order-item-price">NPR ${(item.price * item.quantity).toLocaleString()}</p>
+          </div>
+        </div>
+      `).join('');
+      document.getElementById('summarySubtotal').textContent = Cart.getFormattedSubtotal();
+      document.getElementById('summaryTotal').textContent = Cart.getFormattedSubtotal();
+    }
   </script>
 </body>
 </html>
